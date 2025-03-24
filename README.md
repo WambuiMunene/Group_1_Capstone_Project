@@ -140,7 +140,7 @@ The dataset is sourced from [McAuley Lab’s Amazon Reviews Dataset (2023)](http
 - **Bar Charts & Histograms** – Rating distributions, sentiment trends
 ![alt text](<images/sentiment_dist _by_categ.png>)
 - **Time-Series Analysis** – Sentiment shifts over time
-![sentiment trends.png](sentiment_trends.png)
+![images/sentiment_trends.png](images/sentiment_trends.png)
 
 
 ### Preprocessing Steps
