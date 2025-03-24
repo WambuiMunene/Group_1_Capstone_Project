@@ -49,7 +49,7 @@
   - [**Positive Sentiment Performance**](#positive-sentiment-performance)
   - [**Weighted Average Metrics**](#weighted-average-metrics)
   - [**Conclusion \& Next Steps**](#conclusion--next-steps)
-    - [📌 **Summary: Hyperparameter-Tuned SVM Model**](#-summary-hyperparameter-tuned-svm-model)
+- [📌 **Hyperparameter-Tuned SVM Model**](#-hyperparameter-tuned-svm-model)
       - [🔍 **Objective**](#-objective)
       - [⚙️ **Best Parameters Identified**](#️-best-parameters-identified)
       - [📊 **Performance Metrics**](#-performance-metrics)
@@ -332,7 +332,7 @@ SVM consistently outperforms in weighted averages, making it the best model over
 - **Explore class rebalancing techniques** (oversampling, synthetic data, or class weighting).  
 - **Feature engineering & alternative models** (e.g., deep learning) for better performance.  
 
-### 📌 **Summary: Hyperparameter-Tuned SVM Model**  
+# 📌 **Hyperparameter-Tuned SVM Model**  
 
 #### 🔍 **Objective**  
 - Optimize class separation and address bias toward the positive class using **GridSearchCV**.  
