@@ -134,13 +134,13 @@ The dataset is sourced from [McAuley Lab’s Amazon Reviews Dataset (2023)](http
 - **Product Metadata** – Movie/TV title, genre, release year
 - **User Metadata** – Verified purchase status, review count## Visualization Strategy 
 - **Word Clouds** – Common themes in positive neutral & negative reviews
-![alt text](image.png)
-![alt text](image-2.png)
-![alt text](image-1.png)
+images/wc_pstv sentiment.png
+images/wc_neutra sentiment.png
+images/wc_neg sentiment.png
 - **Bar Charts & Histograms** – Rating distributions, sentiment trends
-![alt text](image-4.png)
+images/sentiment trends.png
 - **Time-Series Analysis** – Sentiment shifts over time
-![alt text](image-3.png)
+images/sentiment dist by categ.png
 
 
 ### Preprocessing Steps
