@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# Amazon Prime Viewers’ Sentiment Analysis
-
-## Table of Contents
-- [Amazon Prime Viewers’ Sentiment Analysis](#amazon-prime-viewers-sentiment-analysis)
-  - [Table of Contents](#table-of-contents)
-  - [About The Project](#about-the-project)
-    - [Overview](#overview)
-=======
 # An Amazon Prime Video Sentiment Analysis
 
 ## Table of Contents
@@ -16,7 +7,6 @@
     - [Overview](#overview)
     - [Problem Statement](#problem-statement)
     - [Business Objectives](#business-objectives)
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
   - [Built With](#built-with)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -61,11 +51,7 @@
   - [**Positive Sentiment Performance**](#positive-sentiment-performance)
   - [**Weighted Average Metrics**](#weighted-average-metrics)
   - [**Conclusion \& Next Steps**](#conclusion--next-steps)
-<<<<<<< HEAD
-    - [📌 **Summary: Hyperparameter-Tuned SVM Model**](#-summary-hyperparameter-tuned-svm-model)
-=======
 - [📌 **Hyperparameter-Tuned SVM Model**](#-hyperparameter-tuned-svm-model)
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
       - [🔍 **Objective**](#-objective)
       - [⚙️ **Best Parameters Identified**](#️-best-parameters-identified)
       - [📊 **Performance Metrics**](#-performance-metrics)
@@ -78,11 +64,8 @@
     - [**2. Undersampling the Positive Class**](#2-undersampling-the-positive-class)
     - [**3. Performance After Undersampling**](#3-performance-after-undersampling)
     - [**4. Conclusion**](#4-conclusion)
-<<<<<<< HEAD
-=======
     - [Recommendation](#recommendation)
     - [Next Step](#next-step)
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
   - [Deployment Plan](#deployment-plan)
     - [Deliverables](#deliverables)
     - [Web App (Stretch Goal)](#web-app-stretch-goal)
@@ -102,23 +85,6 @@
 ### Overview
 This project aims to analyze Amazon Prime Video ratings and reviews to understand customer sentiment, identify trends in viewer preferences, and determine factors influencing high or low ratings. The insights will help improve recommendations, optimize content offerings, and enhance user satisfaction.
 
-<<<<<<< HEAD
-## Built With
-- **Programming Language:** Python
-- **Libraries:** `pandas`, `numpy`, `nltk`, `sklearn`, `seaborn`, `matplotlib`, `wordcloud`, `spacy`, `transformers`, `torch`
-- **Development Environment:** Google Colab, Local Machine
-
-## Getting Started
-### Prerequisites
-Before running this project, ensure you have:
-- Python 3.8+
-- Jupyter Notebook or Google Colab
-- Required Python libraries installed:
-  ```bash
-  pip install pandas numpy matplotlib seaborn nltk spacy transformers torch scikit-learn
-  ```
-
-=======
 ### Problem Statement
 In the highly competitive streaming industry, Amazon Prime Video must continuously enhance customer satisfaction and engagement to stay ahead of competitors like Netflix and Disney+. Key challenges include:
 
@@ -158,7 +124,6 @@ Before running this project, ensure you have:
   pip install pandas numpy matplotlib seaborn nltk spacy transformers torch scikit-learn
   ```
 
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
 ### Installation
 1. Clone the repository:
    ```sh
@@ -197,15 +162,6 @@ The dataset is sourced from [McAuley Lab’s Amazon Reviews Dataset (2023)](http
 - **Product Metadata** – Movie/TV title, genre, release year
 - **User Metadata** – Verified purchase status, review count## Visualization Strategy 
 - **Word Clouds** – Common themes in positive neutral & negative reviews
-<<<<<<< HEAD
-![alt text](image.png)
-![alt text](image-2.png)
-![alt text](image-1.png)
-- **Bar Charts & Histograms** – Rating distributions, sentiment trends
-![alt text](image-4.png)
-- **Time-Series Analysis** – Sentiment shifts over time
-![alt text](image-3.png)
-=======
 ![images/wc_pstv sentiment.png](images/wc_pstv_sentiment.png)
 ![images/wc_neutra sentiment.png](images/wc_neutra_sentiment.png)
 ![images/wc_neg sentiment.png](images/wc_neg_sentiment.png)
@@ -213,7 +169,6 @@ The dataset is sourced from [McAuley Lab’s Amazon Reviews Dataset (2023)](http
 ![alt text](<images/sentiment_dist _by_categ.png>)
 - **Time-Series Analysis** – Sentiment shifts over time
 ![images/sentiment_trends.png](images/sentiment_trends.png)
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
 
 
 ### Preprocessing Steps
@@ -270,11 +225,7 @@ Three models were trained using **TF-IDF vectorization**:
 
 ## Naïve Bayes Results
 
-<<<<<<< HEAD
-**Accuracy:** **86%**
-=======
 **Accuracy:** **86%**  
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
 
 ### Class Performance:
 - **Positive Sentiment:** Best performance with **87% precision** and **99% recall**.
@@ -409,11 +360,7 @@ SVM consistently outperforms in weighted averages, making it the best model over
 - **Explore class rebalancing techniques** (oversampling, synthetic data, or class weighting).  
 - **Feature engineering & alternative models** (e.g., deep learning) for better performance.  
 
-<<<<<<< HEAD
-### 📌 **Summary: Hyperparameter-Tuned SVM Model**  
-=======
 # 📌 **Hyperparameter-Tuned SVM Model**  
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
 
 #### 🔍 **Objective**  
 - Optimize class separation and address bias toward the positive class using **GridSearchCV**.  
@@ -528,10 +475,6 @@ Pipeline(steps=[
     ('svm', SVC(C=10, class_weight='balanced', gamma=0.01, random_state=42))
 ])
 ```
-<<<<<<< HEAD
-
-
-=======
 ### Recommendation
 
 1. **Deep Dive into Sentiment Distribution**  
@@ -566,7 +509,6 @@ Pipeline(steps=[
    - Introduce **Personalized Recommendations** based on user sentiment and preferences.
 
 
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
 ## Deployment Plan
 ### Deliverables
 - Jupyter Notebook with EDA, modeling, and evaluation
@@ -578,11 +520,7 @@ Pipeline(steps=[
 - Review-based sentiment analysis
 
 ### API (Stretch Goal)
-<<<<<<< HEAD
-- Flask/Django API for sentiment prediction
-=======
 - Flask API for sentiment prediction
->>>>>>> 05bc5a0b54650d7a88a4cd4a4a4f6ac40452f60d
 - Accepts user reviews and returns sentiment label
 
 ## Tools & Technologies Used
