@@ -5,6 +5,8 @@
   - [Table of Contents](#table-of-contents)
   - [About The Project](#about-the-project)
     - [Overview](#overview)
+    - [Problem Statement](#problem-statement)
+    - [Business Objectives](#business-objectives)
   - [Built With](#built-with)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -62,6 +64,8 @@
     - [**2. Undersampling the Positive Class**](#2-undersampling-the-positive-class)
     - [**3. Performance After Undersampling**](#3-performance-after-undersampling)
     - [**4. Conclusion**](#4-conclusion)
+    - [Recommendation](#recommendation)
+    - [Next Step](#next-step)
   - [Deployment Plan](#deployment-plan)
     - [Deliverables](#deliverables)
     - [Web App (Stretch Goal)](#web-app-stretch-goal)
@@ -80,6 +84,30 @@
 ## About The Project
 ### Overview
 This project aims to analyze Amazon Prime Video ratings and reviews to understand customer sentiment, identify trends in viewer preferences, and determine factors influencing high or low ratings. The insights will help improve recommendations, optimize content offerings, and enhance user satisfaction.
+
+### Problem Statement
+In the highly competitive streaming industry, Amazon Prime Video must continuously enhance customer satisfaction and engagement to stay ahead of competitors like Netflix and Disney+. Key challenges include:
+
+  **- Addressing Negative Sentiments:** Understanding recurring complaints about content quality, technical issues, and pricing concerns to improve user satisfaction.
+
+  **-Differentiating Neutral Sentiment:** Analyzing neutral reviews to uncover hidden dissatisfaction or lukewarm reception.
+
+  **-Improving Content Strategy:** Identifying trends in user feedback related to genres, storylines, production quality, and casting choices.
+
+  **-Actionable Business Insights:** Utilizing sentiment analysis beyond classification to refine marketing, pricing models, and recommendation algorithms.
+
+By leveraging **NLP** techniques and machine learning, this project aims to extract meaningful insights from customer reviews to enhance Prime Video's content strategy and user experience.
+
+### Business Objectives  
+
+1. **Understand Sentiment by Genre** – Analyze audience emotions across different content genres to identify trends in user engagement and satisfaction.  
+
+2. **Improving Customer Retention** – Identify key drivers of positive sentiment (e.g., genre, cast, production quality) to enhance viewer loyalty and reduce churn.  
+
+3. **Enhancing Product Offerings** – Use negative sentiment analysis to pinpoint recurring content or technical issues, ensuring proactive improvements to meet customer expectations.  
+
+4. **Refine Content and Service Differentiation** – Analyze neutral reviews to uncover areas for incremental improvements, preventing stagnation and transforming average user experiences into positive ones.
+
 
 ## Built With
 - **Programming Language:** Python
@@ -447,6 +475,38 @@ Pipeline(steps=[
     ('svm', SVC(C=10, class_weight='balanced', gamma=0.01, random_state=42))
 ])
 ```
+### Recommendation
+
+1. **Deep Dive into Sentiment Distribution**  
+   - Segment neutral and negative feedback into themes (e.g., content quality, technical issues, genre preferences).  
+   - Identify recurring pain points and prioritize critical areas for improvement.  
+   - Implement targeted solutions such as enhancing storytelling, upgrading streaming technology, and expanding diverse content.  
+   - Use positive sentiment for marketing and ensure ongoing feedback collection to measure improvements.  
+
+2. **Address Sentiment by Genre**  
+   - **Leverage Popular Genres** – Promote highly rated genres (e.g., Animation, Fantasy) through targeted recommendations and exclusive content investments.  
+   - **Address Critical Feedback** – Improve underperforming genres (e.g., Horror, Arts) by addressing viewer concerns, collaborating with experienced creators, and piloting innovative content formats.  
+   - **Refine Neutral Sentiment Categories** – Analyze the reasons behind neutral feedback, tailor content strategies for better audience engagement, and measure the impact of new initiatives.
+
+
+
+### Next Step  
+
+1. **Model Deployment**  
+   - Develop a **Flask-based API** to process user inputs and return sentiment results efficiently.  
+   - Ensure **scalability** through containerization (Docker) and cloud deployment (AWS/Azure).  
+   - Secure the API with **authentication and encryption** measures.  
+
+2. **User Interface (UI)**  
+   - Create a **user-friendly interface** for sentiment analysis interaction.  
+   - Provide **real-time feedback** and sentiment trend visualizations.  
+   - Ensure **cross-device accessibility** (desktop, tablet, mobile).  
+
+3. **Advanced Modeling Techniques**  
+   - Implement **LSTMs, BERT, or GPT** for more accurate and real-time sentiment classification.  
+   - Conduct **Aspect-Based Sentiment Analysis** to identify feedback on specific elements (e.g., content, streaming quality).  
+   - Extend **Emotion Detection** beyond sentiment to classify emotions like joy, frustration, and anger.  
+   - Introduce **Personalized Recommendations** based on user sentiment and preferences.
 
 
 ## Deployment Plan
@@ -460,7 +520,7 @@ Pipeline(steps=[
 - Review-based sentiment analysis
 
 ### API (Stretch Goal)
-- Flask/Django API for sentiment prediction
+- Flask API for sentiment prediction
 - Accepts user reviews and returns sentiment label
 
 ## Tools & Technologies Used
