@@ -1,7 +1,7 @@
-# Amazon Prime Viewers’ Sentiment Analysis
+# An Amazon Prime Video Sentiment Analysis
 
 ## Table of Contents
-- [Amazon Prime Viewers’ Sentiment Analysis](#amazon-prime-viewers-sentiment-analysis)
+- [An Amazon Prime Video Sentiment Analysis](#an-amazon-prime-video-sentiment-analysis)
   - [Table of Contents](#table-of-contents)
   - [About The Project](#about-the-project)
     - [Overview](#overview)
