@@ -16,6 +16,7 @@
     - [Data Source](#data-source)
     - [Dataset Details](#dataset-details)
     - [Key Features](#key-features)
+  - [Visualization Strategy](#visualization-strategy)
     - [Preprocessing Steps](#preprocessing-steps)
   - [Methodology](#methodology)
     - [Baseline Models](#baseline-models)
@@ -160,13 +161,22 @@ The dataset is sourced from [McAuley Lab’s Amazon Reviews Dataset (2023)](http
 - **Star Rating** – Numeric rating (1-5)
 - **Timestamp** – Review date/time
 - **Product Metadata** – Movie/TV title, genre, release year
-- **User Metadata** – Verified purchase status, review count## Visualization Strategy 
+- **User Metadata** – Verified purchase status, review count
+## Visualization Strategy 
 - **Word Clouds** – Common themes in positive neutral & negative reviews
 ![images/wc_pstv sentiment.png](images/wc_pstv_sentiment.png)
 ![images/wc_neutra sentiment.png](images/wc_neutra_sentiment.png)
 ![images/wc_neg sentiment.png](images/wc_neg_sentiment.png)
+
+
 - **Bar Charts & Histograms** – Rating distributions, sentiment trends
 ![alt text](<images/sentiment_dist _by_categ.png>)
+
+![alt text](images/sentiment_by_price.png)
+
+![alt text](images/top_20_words_by_sentiment.png)
+
+![alt text](images/POS_distribution.png)
 - **Time-Series Analysis** – Sentiment shifts over time
 ![images/sentiment_trends.png](images/sentiment_trends.png)
 
