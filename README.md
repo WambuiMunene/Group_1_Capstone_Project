@@ -67,6 +67,14 @@
     - [**4. Conclusion**](#4-conclusion)
     - [Recommendation](#recommendation)
     - [Next Step](#next-step)
+    - [**Advanced Modeling with BERT for Sentiment Analysis**](#advanced-modeling-with-bert-for-sentiment-analysis)
+    - [**Model Overview: BERT-Based Sentiment Classification**](#model-overview-bert-based-sentiment-classification)
+    - [**Training Summary (Epochs 1–3):**](#training-summary-epochs-13)
+    - [**Performance Insights by Sentiment:**](#performance-insights-by-sentiment)
+    - [✅ **Neutral Class Challenges:**](#-neutral-class-challenges)
+    - [⚠️ **Overfitting Warning:**](#️-overfitting-warning)
+    - [📊 **Performance Summary (Post Fine-Tuning):**](#-performance-summary-post-fine-tuning)
+    - [✅ **Key Observations:**](#-key-observations-1)
   - [Deployment Plan](#deployment-plan)
     - [Deliverables](#deliverables)
     - [Web App (Stretch Goal)](#web-app-stretch-goal)
@@ -518,6 +526,95 @@ Pipeline(steps=[
    - Extend **Emotion Detection** beyond sentiment to classify emotions like joy, frustration, and anger.  
    - Introduce **Personalized Recommendations** based on user sentiment and preferences.
 
+
+### **Advanced Modeling with BERT for Sentiment Analysis**
+
+In this project, BERT is fine-tuned using **a larger subset of the Amazon Prime review dataset** to ensure broader exposure to diverse language patterns, especially within the **neutral sentiment class**, which often contains ambiguous or context-sensitive expressions. By increasing the dataset size and complexity during fine-tuning, we aim to improve BERT’s generalization ability and **boost its accuracy in identifying nuanced emotional tones** in user reviews.
+
+This advanced modeling step is key to achieving a more reliable and robust sentiment analysis pipeline that can adapt to the complexities of real-world user feedback.
+
+In our dataset, the sentiment distribution is as follows:
+
+- **Positive:** 176,755 reviews  
+- **Negative:** 33,414 reviews  
+- **Neutral:** 23,441 reviews  
+
+While the positive class dominates, the **neutral class presents unique challenges** due to its ambiguity and context-dependent nature. To address this, we fine-tune BERT on a **larger and more diverse subset of the data**, exposing it to varied patterns and edge cases. This helps improve its ability to generalize and accurately classify sentiments, especially for the underrepresented and complex neutral reviews.
+
+
+
+### **Model Overview: BERT-Based Sentiment Classification**
+
+This BERT-based sentiment analysis model is fine-tuned to classify text into **three categories**: *Negative*, *Neutral*, and *Positive*.
+
+- It is built using **PyTorch**, with **GPU-accelerated training and validation loops** to ensure fast and efficient computation.
+- Model performance is tracked using key metrics, including **training/validation loss**, **precision**, **recall**, and **F1-score**, all derived from a comprehensive classification report.
+- A **model checkpointing strategy** is employed to implement early stopping, saving the best-performing model based on the **lowest validation loss**.
+- The training process features a **gradual reduction in loss across epochs**, providing deep insights into **class-level performance**, which is particularly valuable for more nuanced categories like *Neutral*.
+  
+This robust setup ensures optimized predictions across all sentiment classes and is well-suited for real-world text analysis applications.
+
+### **Training Summary (Epochs 1–3):**
+
+The BERT-based sentiment model showed **consistent improvement across three epochs**, achieving a final **accuracy of 85%**. The model checkpoint was saved after Epochs 1 and 2, based on the lowest validation loss, with **balanced performance across sentiment classes**. Precision and recall values indicate strong classification of *positive* and *negative* sentiments, while *neutral* remains the most challenging class.
+
+
+### **Performance Insights by Sentiment:**
+
+- **Positive:**  
+  - Achieved consistently **high precision and recall (~93%)**, showing the model handles clear sentiment well.  
+  - F1-score remained **above 0.92** across all epochs.
+
+- **Neutral:**  
+  - Most challenging to classify due to its **subtle and ambiguous tone**.  
+  - F1-score peaked at **0.71**, with fluctuating recall between 53–72%.
+
+- **Negative:**  
+  - Steady improvement with a **final F1-score of 0.86**.  
+  - Recall increased over epochs, reaching **89% in the final epoch**, indicating better detection of negative reviews.
+
+
+### ✅ **Neutral Class Challenges:**
+- **F1-score for Neutral**:
+  - **Epoch 1:** 0.64  
+  - **Epoch 2:** 0.71  
+  - **Epoch 3:** 0.69  
+- While there's improvement in Epoch 2, the neutral class still **lags behind** the positive (0.92–0.93) and negative (0.86–0.87) classes in all epochs.
+- **Reason:** Neutral reviews often contain mixed language, making them semantically close to both positive and negative classes. BERT, despite its deep context understanding, still struggles with such ambiguity—especially with fewer training examples.
+
+
+### ⚠️ **Overfitting Warning:**
+- **Training Loss:**
+  - Decreases steadily from **0.39 → 0.30 → 0.23**
+- **Validation Loss:**
+  - Improves from **0.36 → 0.35**, but **increases to 0.40** in Epoch 3
+- This **divergence** indicates the model is starting to memorize the training data instead of generalizing—classic sign of **overfitting**.
+- It's good that **early stopping** or checkpointing was implemented, as the best model likely came from **Epoch 2**.
+
+
+### 📊 **Performance Summary (Post Fine-Tuning):**
+
+- **Best Epoch:** Epoch 1 shows the **lowest validation loss (0.3291)** and **strong, balanced performance** across all classes.
+- **Validation Accuracy:** Remains consistently high across all epochs:
+  - Epoch 1: **86.85%**
+  - Epoch 2: **86.77%**
+  - Epoch 3: **86.03%**
+
+
+### ✅ **Key Observations:**
+
+1. **Neutral Class (Label 1) Improvement:**
+   - F1-score improved to **0.72** in Epoch 2 from **0.71** in earlier runs.
+   - Still the **most challenging** class, but the model generalizes better with tuning.
+
+2. **Overfitting Signs Still Present:**
+   - Training loss steadily decreased (**0.2787 → 0.2106 → 0.1462**),
+   - Validation loss increased after Epoch 1 (**0.3291 → 0.3695 → 0.4465**),
+   - Confirms mild **overfitting** beyond Epoch 1.
+
+3. **Positive Class (Label 2) Performance:**
+   - Remained **strong and stable**, F1-scores around **0.93**.
+   - High precision and recall throughout indicate **model confidence and correctness**.
 
 ## Deployment Plan
 ### Deliverables
