@@ -661,9 +661,17 @@ streamlit run app.py
 ✅ Build a recommendation system based on sentiment trends  
 
 ## Contributors
-- **Team Members:** (List names)
-- **Mentor:** (If applicable)
-- **Contact:** (GitHub repo)
+- **Team Members:** 
+1. Wambui Munene
+2. Moses
+3. Edwin George
+4. Nelima Wanyama
+5. Spencer lugalia
+
+- **Mentor:** 
+  
+- **Contact:** 
+  [GitHub Repository](https://github.com/WambuiMunene/Group_1_Capstone_Project)
 
 
 ## Contact
